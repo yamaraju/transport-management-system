@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: transport-management
+  datasource:
+    url: jdbc:mysql://localhost:3306/tms_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: tms_user
+    password: tms_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+# JWT Configurations
+jwt:
+  secret: MTA0RTYzNTI2NjU1NkE1ODZFMzI3MjM1NzUzODc4MkY0MTNGNDQyODQ3MkI0QjYyNTA2NDUzNjc1NjZCNTk3MA==
+  expiration: 86400000 # 24 hours in milliseconds
